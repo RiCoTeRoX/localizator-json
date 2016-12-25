@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "",
-    "testjs:watch": "nodemon -q -x 'npm run testjs -s' ./test/ -w ./test/",
+    "testjs:watch": "nodemon -q -x 'npm run testjs -s' ./test/ -w ./test/ -w ./src/",
     "testjs": "tape -1 -r babel-register './test/*.test.js' | tap-spec"
   },
   "devDependencies": {
