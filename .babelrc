@@ -1,4 +1,3 @@
 {
-  "presets": ["es2015", "react"],
-  "plugins": ["transform-object-assign", "transform-object-rest-spread", "transform-flow-strip-types"]
+  "presets": ["env", "es2015", "react"]
 }
