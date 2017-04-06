@@ -28,10 +28,18 @@ export default class Localizator {
 
   get (key, replace = null) {
     if (this.memorySource[key]) {
-      return this.memorySource[key];
+      return this.wildCardReplace(this.memorySource[key], replace);
     } else {
       return 'Key doesn`t exist';
     }
+  }
+
+  wildCardReplace (text, replaceElements) {
+    var i, replacedText = text;
+    for (i = 0; i < replaceElements.length; i++) {
+      replacedText = replacedText.replace(new RegExp("%" + (i + 1), 'ig'), replaceElements[i]);
+    }
+    return replacedText;
   }
 }
 //
